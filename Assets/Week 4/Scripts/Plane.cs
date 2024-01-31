@@ -16,6 +16,7 @@ public class Plane : MonoBehaviour
     public AnimationCurve landing;
     float landingTimer;
     SpriteRenderer spriteRender;
+    public bool land = false;
 
     void OnMouseDown()
     {
@@ -71,7 +72,7 @@ public class Plane : MonoBehaviour
     void Update()
     {
         
-        if(Input.GetKey(KeyCode.Space))
+        if(land == true)
         {
             landingTimer += 0.1f * Time.deltaTime;
             float interpolation = landing.Evaluate(landingTimer);
@@ -101,7 +102,9 @@ public class Plane : MonoBehaviour
     
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        spriteRender.color = Color.red;
+            spriteRender.color = Color.red;
+        
+        
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -111,8 +114,14 @@ public class Plane : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Vector3.Distance(currentPosition, collision.transform.position) < 1){
-            Destroy(gameObject);
+
+        if (collision.gameObject.GetComponent<Plane>()){
+            if (Vector3.Distance(currentPosition, collision.transform.position) < 1)
+            {
+                Destroy(gameObject);
+            }
         }
+        
+
     }
 }
