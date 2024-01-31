@@ -42,6 +42,7 @@ public class Plane : MonoBehaviour
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, transform.position);
         rigidbody = GetComponent<Rigidbody2D>();
+        speed = Random.RandomRange(1f, 3f);
     }
 
     void FixedUpdate()
