@@ -259,19 +259,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68bfbfaf7204cb542ab2ce81ae227a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Plane: {fileID: 1311778146}
+  Plane: {fileID: 1552542573851491690, guid: dc25cb8ee923a8841a23daa6d43b07cc, type: 3}
   timerValue: 0
   timerTarget: 5
-  sprites:
+  spriteArray:
   - {fileID: 21300000, guid: c73a14ae579ec794db786a6cb7b74e20, type: 3}
   - {fileID: 21300000, guid: 24c052ba7e2db304696a436c1d715f04, type: 3}
   - {fileID: 21300000, guid: 6bf9530ecd83c664099aa71dd0a5223e, type: 3}
   - {fileID: 21300000, guid: 3c91ca5ea46cd97409cdc7acb86e3523, type: 3}
---- !u!1 &1311778146 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1552542573851491690, guid: dc25cb8ee923a8841a23daa6d43b07cc, type: 3}
-  m_PrefabInstance: {fileID: 42254670068445545}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &42254670068445545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,6 +278,14 @@ PrefabInstance:
     - target: {fileID: 1552542573851491690, guid: dc25cb8ee923a8841a23daa6d43b07cc, type: 3}
       propertyPath: m_Name
       value: Plane
+      objectReference: {fileID: 0}
+    - target: {fileID: 2273531514578959057, guid: dc25cb8ee923a8841a23daa6d43b07cc, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2832186776872014532, guid: dc25cb8ee923a8841a23daa6d43b07cc, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8485888357727426024, guid: dc25cb8ee923a8841a23daa6d43b07cc, type: 3}
       propertyPath: m_LocalPosition.x

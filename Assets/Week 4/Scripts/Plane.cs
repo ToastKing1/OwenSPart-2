@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.U2D;
 
 public class Plane : MonoBehaviour
 {
@@ -9,10 +11,12 @@ public class Plane : MonoBehaviour
     Vector2 lastPosition;
     LineRenderer lineRenderer;
     Vector2 currentPosition;
-    Rigidbody2D rigidbody;
+    Rigidbody2D rigid;
     public float speed = 1.0f;
     public AnimationCurve landing;
     float landingTimer;
+    SpriteRenderer spriteRender;
+
     void OnMouseDown()
     {
         points = new List<Vector2>();
@@ -41,8 +45,10 @@ public class Plane : MonoBehaviour
         lineRenderer = GetComponent<LineRenderer>();
         lineRenderer.positionCount = 1;
         lineRenderer.SetPosition(0, transform.position);
-        rigidbody = GetComponent<Rigidbody2D>();
-        speed = Random.RandomRange(1f, 3f);
+        rigid = GetComponent<Rigidbody2D>();
+        speed = Random.Range(1f, 3f);
+        spriteRender = GetComponent<SpriteRenderer>();
+        
     }
 
     void FixedUpdate()
@@ -52,13 +58,19 @@ public class Plane : MonoBehaviour
         {
             Vector2 direction = points[0] - currentPosition;
             float angle = Mathf.Atan2(direction.x, direction.y) * Mathf.Rad2Deg;
-            rigidbody.rotation = -angle;
+            rigid.rotation = -angle;
         }
-        rigidbody.MovePosition(rigidbody.position + (Vector2)transform.up * speed * Time.deltaTime);
+        rigid.MovePosition(rigid.position + (Vector2)transform.up * speed * Time.deltaTime);
+    }
+
+    private void OnBecameInvisible()
+    {
+        Destroy(gameObject);
     }
 
     void Update()
     {
+        
         if(Input.GetKey(KeyCode.Space))
         {
             landingTimer += 0.1f * Time.deltaTime;
@@ -84,5 +96,23 @@ public class Plane : MonoBehaviour
             }
         }
 
+    }
+
+    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        spriteRender.color = Color.red;
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        spriteRender.color = Color.white;
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (Vector3.Distance(currentPosition, collision.transform.position) < 1){
+            Destroy(gameObject);
+        }
     }
 }
