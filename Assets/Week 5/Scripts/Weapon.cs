@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
 {
     float weaponTimerValue = 0f;
     public float weaponTimerTarget = 10f;
-    public float speed = 10f;
+    public float speed = 20f;
     Rigidbody2D rb;
     // Start is called before the first frame update
     void Start()
@@ -31,7 +31,9 @@ public class Weapon : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        collision.gameObject.SendMessageUpwards("TakeDamage", 3, SendMessageOptions.DontRequireReceiver);
-        Destroy(gameObject);
+        if (collision.gameObject.name == "Body" || collision.gameObject.name == "Head") {
+            collision.gameObject.SendMessageUpwards("TakeDamage", 3, SendMessageOptions.DontRequireReceiver);
+            Destroy(gameObject);
+        }
     }
 }
