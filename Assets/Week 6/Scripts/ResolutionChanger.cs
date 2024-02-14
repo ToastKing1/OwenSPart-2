@@ -6,16 +6,18 @@ using UnityEngine;
 
 public class ResolutionChanger : MonoBehaviour
 {
-    public void ChangeAspectRatio(bool HD)
+    public int width;
+    public int height;
+
+    public void SetWidth(int newWidth)
     {
-        if (!HD)
-        {
-            Screen.SetResolution(1600, 900, false);
-        }
-        else
-        {
-            Screen.SetResolution(1920, 1080, false);
-        }
+        width = newWidth;
+    }
+    public void SetHeight(int newHeight) { 
+        height = newHeight;
+    }
+    public void ChangeAspectRatio() { 
+        Screen.SetResolution(width, height, false);
     }
 
 
