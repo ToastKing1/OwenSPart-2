@@ -12,10 +12,10 @@ public class PlayerScript : MonoBehaviour
     float deathTimer;
     public Animator animator;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        
+        // player has max health at start
+        health = 100;
     }
 
     // Update is called once per frame
@@ -26,31 +26,42 @@ public class PlayerScript : MonoBehaviour
         {
             deathTimer += 1 * Time.deltaTime;
             // switch to lose scene after the death timer is done
-            if (deathTimer < 100)
+            if (deathTimer < 50)
             {
-
+                // sends a message to the scene manager
             }
         }
         // code runs normal if the player isn't dead
         else
         {
-            // if the player is redirecting magic bolts
-            if (Input.GetMouseButtonDown(0))
+            // if the player is redirecting magic bolts they play an animation
+            if (Input.GetMouseButton(0))
             {
-
+                animator.SetBool("Redirecting", true);
+            }
+            // otherwise they are idle
+            else
+            {
+                animator.SetBool("Redirecting", false);
             }
         }
         
     }
 
+    // this runs when the player collides with a bolt
     void Damaged(float damage)
     {
         if (!isDead)
         {
             health -= damage;
-            if (health < 0)
+            if (health <= 0)
             {
                 isDead = true;
+                animator.SetTrigger("Death");
+            }
+            else
+            {
+                animator.SetTrigger("Hurt");
             }
         }
     }
