@@ -11,11 +11,13 @@ public class PlayerScript : MonoBehaviour
     bool isDead = false;
     float deathTimer;
     public Animator animator;
+    public GameObject levelManager;
 
     private void Start()
     {
         // player has max health at start
         health = 100;
+
     }
 
     // Update is called once per frame
@@ -29,6 +31,7 @@ public class PlayerScript : MonoBehaviour
             if (deathTimer < 50)
             {
                 // sends a message to the scene manager
+                levelManager.SendMessageUpwards("SceneChange");
             }
         }
         // code runs normal if the player isn't dead
