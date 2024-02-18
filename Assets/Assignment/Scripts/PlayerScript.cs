@@ -7,9 +7,10 @@ using System;
 
 public class PlayerScript : MonoBehaviour
 {
-    float health = 100;
+    public float health = 100;
     bool isDead = false;
     float deathTimer;
+    public Animator animator;
 
     // Start is called before the first frame update
     void Start()

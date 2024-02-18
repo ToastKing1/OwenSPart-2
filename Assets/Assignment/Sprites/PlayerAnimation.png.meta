@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -140,6 +140,258 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0deb8069898bf84fada0cb7b620e45b
+      internalID: -1558914553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_1
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 855073d360f69b04b8a12c19e3a69fe4
+      internalID: -1541081929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03728e74c9110ae419b87bfe2773f5a2
+      internalID: 837364859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 768
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54d0cd40d2d3d3c43bd2084ffea20275
+      internalID: 136833836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad0ed2c4f324de045a043f09637c3c1f
+      internalID: -206168246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_5
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23843a440e09e4d44abd016e6f35b928
+      internalID: 575433464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_6
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586f7977920d1524da9537cd7a7f77ae
+      internalID: 1108922502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_7
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 512
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bef415d3867fd2741a3b8a09e7c7dfd9
+      internalID: 1218512460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601ea272b62bff2438eadd70c7ed00e2
+      internalID: 993385222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_9
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5050c53e1f55c44ebd240636df60023
+      internalID: -1773691662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 184cd3cbe77761d40bc272cae72a3dcb
+      internalID: 1567690053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_11
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 256
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3927be998364f6741bd53b09d791bd21
+      internalID: 663520375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerAnimation_12
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 256
         height: 256
@@ -150,14 +402,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c3f5f1d418aee24d9360dddf4dec111
-      internalID: 786203639
+      spriteID: a0a1d74a3518b454ebb2d42140f10f83
+      internalID: -563765053
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnimation_1
+      name: PlayerAnimation_13
       rect:
         serializedVersion: 2
         x: 256
@@ -171,14 +423,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dc5d97dbce620e469e567a391fabe4e
-      internalID: -1444993940
+      spriteID: 375d135496144d24da977aac7e44ffdf
+      internalID: 215972456
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnimation_2
+      name: PlayerAnimation_14
       rect:
         serializedVersion: 2
         x: 512
@@ -192,14 +444,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14f5bab98c920d942bf130a362f12d6c
-      internalID: 1788511089
+      spriteID: 2b1d4e54a4dedee4e95f02759fa63ff8
+      internalID: 900784319
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerAnimation_3
+      name: PlayerAnimation_15
       rect:
         serializedVersion: 2
         x: 768
@@ -213,8 +465,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 69e24d69181531b4bb2aada70fe4efa5
-      internalID: 1726582648
+      spriteID: 236a35f4a02407544b50a1b58cdf7c1a
+      internalID: -995714196
       vertices: []
       indices: 
       edges: []
@@ -230,10 +482,22 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      PlayerAnimation_0: 786203639
-      PlayerAnimation_1: -1444993940
-      PlayerAnimation_2: 1788511089
-      PlayerAnimation_3: 1726582648
+      PlayerAnimation_0: -1558914553
+      PlayerAnimation_1: -1541081929
+      PlayerAnimation_10: 1567690053
+      PlayerAnimation_11: 663520375
+      PlayerAnimation_12: -563765053
+      PlayerAnimation_13: 215972456
+      PlayerAnimation_14: 900784319
+      PlayerAnimation_15: -995714196
+      PlayerAnimation_2: 837364859
+      PlayerAnimation_3: 136833836
+      PlayerAnimation_4: -206168246
+      PlayerAnimation_5: 575433464
+      PlayerAnimation_6: 1108922502
+      PlayerAnimation_7: 1218512460
+      PlayerAnimation_8: 993385222
+      PlayerAnimation_9: -1773691662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
