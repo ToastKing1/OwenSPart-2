@@ -52,7 +52,7 @@ public class PlayerScript : MonoBehaviour
     }
 
     // this runs when the player collides with a bolt
-    void Damaged(float damage)
+    public void Damaged(float damage)
     {
         if (!isDead)
         {
