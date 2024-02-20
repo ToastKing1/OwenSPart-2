@@ -11,10 +11,10 @@ public class MagicBolt : MonoBehaviour
     public float damage;
     public List<Vector2> movePoints;
     public float speed;
-    public float pointThreshold = 0.4f;
+    public float pointThreshold = 1.0f;
     public float timer;
     public Rigidbody2D rb;
-    Vector2 currentPosition;
+    public Vector2 currentPosition;
     Vector2 lastPosition;
     public Animator animator;
 
@@ -22,6 +22,7 @@ public class MagicBolt : MonoBehaviour
     {
         // set a point to the player but since the player is at (0,0), the point will be at (0,0)
         movePoints = new List<Vector2>();
+        Vector2 currentPosition = (Vector2)Camera.main.ScreenToWorldPoint(Input.mousePosition);
         movePoints.Add(Vector2.zero);
         if (damage > 0)
         {
