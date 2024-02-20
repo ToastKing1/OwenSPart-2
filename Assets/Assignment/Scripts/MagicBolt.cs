@@ -16,7 +16,7 @@ public class MagicBolt : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 currentPosition;
     Vector2 lastPosition;
-    Animator animator;
+    public Animator animator;
 
     private void Start()
     {
@@ -31,7 +31,7 @@ public class MagicBolt : MonoBehaviour
         {
             animator.SetBool("Hurtful", false);
         }
-        
+
     }
     void OnMouseDown()
     {
@@ -69,6 +69,7 @@ public class MagicBolt : MonoBehaviour
 
     private void Update()
     {
+        
         // timer goes up every frame
         timer += 1 * Time.deltaTime;
         // when the timer hits a certain point, it will destroy the magic bolt

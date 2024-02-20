@@ -80,7 +80,7 @@ SpriteRenderer:
   m_Sprite: {fileID: -1705055338, guid: 289a66d1f0d7ad749bf66eb8cce46e0f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
-  m_FlipY: 0
+  m_FlipY: 1
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
@@ -136,12 +136,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   collider: {fileID: 1703895860405079336}
-  damage: 20
+  damage: -20
   movePoints: []
   speed: 1
   pointThreshold: 0.1
   timer: 0
   rb: {fileID: 4393829898932884217}
+  animator: {fileID: 4598250166929319037}
 --- !u!50 &4393829898932884217
 Rigidbody2D:
   serializedVersion: 4
