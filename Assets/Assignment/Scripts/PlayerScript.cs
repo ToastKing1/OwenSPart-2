@@ -9,7 +9,7 @@ public class PlayerScript : MonoBehaviour
 {
     public float health = 100;
     bool isDead = false;
-    float deathTimer;
+    public float deathTimer;
     public Animator animator;
     public GameObject levelManager;
     public Slider slider;
@@ -29,7 +29,7 @@ public class PlayerScript : MonoBehaviour
         {
             deathTimer += 1 * Time.deltaTime;
             // switch to lose scene after the death timer is done
-            if (deathTimer < 50)
+            if (deathTimer > 2)
             {
                 // sends a message to the scene manager
                 levelManager.SendMessageUpwards("SceneChange");

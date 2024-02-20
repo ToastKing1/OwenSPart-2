@@ -11,7 +11,7 @@ public class MagicBolt : MonoBehaviour
     public float damage;
     public List<Vector2> movePoints;
     public float speed;
-    public float pointThreshold = 1.0f;
+    public float pointThreshold = 0.4f;
     public float timer;
     public Rigidbody2D rb;
     public Vector2 currentPosition;
@@ -82,6 +82,7 @@ public class MagicBolt : MonoBehaviour
         // update the points list
         if (movePoints.Count > 0)
         {
+            // remove points that are too close to the bolt
             if (Vector2.Distance(currentPosition, movePoints[0]) < pointThreshold)
             {
                 movePoints.RemoveAt(0);
