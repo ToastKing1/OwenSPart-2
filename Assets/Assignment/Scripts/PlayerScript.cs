@@ -57,6 +57,7 @@ public class PlayerScript : MonoBehaviour
         if (!isDead)
         {
             health -= damage;
+            health = Mathf.Clamp(health, 0, 100);
             if (health <= 0)
             {
                 isDead = true;

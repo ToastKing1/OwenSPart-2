@@ -16,14 +16,22 @@ public class MagicBolt : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 currentPosition;
     Vector2 lastPosition;
-    SpriteRenderer sr;
+    Animator animator;
 
     private void Start()
     {
         // set a point to the player but since the player is at (0,0), the point will be at (0,0)
         movePoints = new List<Vector2>();
         movePoints.Add(Vector2.zero);
-        sr = GetComponent<SpriteRenderer>();
+        if (damage > 0)
+        {
+            animator.SetBool("Hurtful", true);
+        }
+        else
+        {
+            animator.SetBool("Hurtful", false);
+        }
+        
     }
     void OnMouseDown()
     {
