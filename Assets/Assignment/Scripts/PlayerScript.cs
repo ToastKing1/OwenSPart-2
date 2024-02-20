@@ -12,12 +12,13 @@ public class PlayerScript : MonoBehaviour
     float deathTimer;
     public Animator animator;
     public GameObject levelManager;
+    public Slider slider;
 
     private void Start()
     {
         // player has max health at start
         health = 100;
-
+        slider.value = health;
     }
 
     // Update is called once per frame
@@ -54,10 +55,15 @@ public class PlayerScript : MonoBehaviour
     // this runs when the player collides with a bolt
     public void Damaged(float damage)
     {
+        // if the player isn't dead
         if (!isDead)
         {
+            // health is minused by damage
+            // healing works as "health -= -20" for example, which makes it positive
             health -= damage;
+            // clamp the health
             health = Mathf.Clamp(health, 0, 100);
+            // this is to check if the player has run out of health, otherwise the player plays the hurt animation
             if (health <= 0)
             {
                 isDead = true;
@@ -67,6 +73,8 @@ public class PlayerScript : MonoBehaviour
             {
                 animator.SetTrigger("Hurt");
             }
+            // update the slider
+            slider.value = health;
         }
     }
 }
