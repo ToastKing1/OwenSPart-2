@@ -10,12 +10,29 @@ public class GoalkeeperController : MonoBehaviour
     public Rigidbody2D rb;
     Vector2 direction;
     public Transform goalControllerTransform;
+    float distance;
+    float goalLine = 2.5f;
 
     private void FixedUpdate()
     {
-        //direction = (goalControllerTransform.position - Controller.selectedPlayer.transform.position).normalized;
-        direction = (goalControllerTransform.position - Controller.selectedPlayer.transform.position).normalized;
-        rb.transform.position = (Vector2)goalControllerTransform.position - direction;
+        if (Controller.selectedPlayer != null) {
+            direction = (goalControllerTransform.position - Controller.selectedPlayer.transform.position);
+
+            distance = direction.magnitude;
+
+            if (distance > goalLine)
+            {
+                direction = (Vector2)goalControllerTransform.position - direction.normalized * goalLine;
+            }
+            else
+            {
+                direction = (Vector2)goalControllerTransform.position - direction / 2;
+            }
+
+
+            rb.transform.position = direction;
+        }
+        
     }
 
     // Update is called once per frame
