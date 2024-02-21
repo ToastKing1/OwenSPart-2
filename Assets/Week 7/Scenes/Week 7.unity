@@ -3436,6 +3436,50 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &847789798
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 847789800}
+  - component: {fileID: 847789799}
+  m_Layer: 0
+  m_Name: Red Team Controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &847789799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847789798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f4d76bd4b3be334a9e91ba1feb899aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &847789800
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 847789798}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1079000000
 GameObject:
   m_ObjectHideFlags: 0
@@ -3781,6 +3825,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 6841903721305901527, guid: 467674e906e64194593c5065e6aa3389, type: 3}
+      propertyPath: SelectedColour.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841903721305901527, guid: 467674e906e64194593c5065e6aa3389, type: 3}
+      propertyPath: SelectedColour.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6841903721305901527, guid: 467674e906e64194593c5065e6aa3389, type: 3}
+      propertyPath: SelectedColour.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112722678364082677, guid: 467674e906e64194593c5065e6aa3389, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112722678364082677, guid: 467674e906e64194593c5065e6aa3389, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7112722678364082677, guid: 467674e906e64194593c5065e6aa3389, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7618840072846227969, guid: 467674e906e64194593c5065e6aa3389, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3839,3 +3907,4 @@ SceneRoots:
   - {fileID: 1566282831}
   - {fileID: 1611151316}
   - {fileID: 1296303221}
+  - {fileID: 847789800}

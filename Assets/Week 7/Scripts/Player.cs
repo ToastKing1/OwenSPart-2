@@ -9,9 +9,6 @@ public class Player : MonoBehaviour
     public Rigidbody2D rb;
     public float charge;
     public SpriteRenderer sr;
-    bool clickingOnSelf = false;
-    public Color SelectedColour;
-    public Color UnselectedColour;
 
     private void Start()
     {
@@ -21,30 +18,18 @@ public class Player : MonoBehaviour
 
     private void OnMouseDown()
     {
-        clickingOnSelf = true;
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            rb.AddForce(Vector2.up*5);
-        }
-        if (Input.GetMouseButtonDown(0) && clickingOnSelf)
-        {
-            Selected(true);
-        }
+        Controller.SetSelectedPlayer(this);
     }
 
     public void Selected(bool selected)
     {
         if (selected)
         {
-            sr.color = SelectedColour;
+            sr.color = Color.green;
         }
         else
         {
-            sr.color = UnselectedColour;
+            sr.color = Color.red;
         }
     }
 }
