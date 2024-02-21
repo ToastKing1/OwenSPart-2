@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using Unity.VisualScripting;
 
 public class GoalkeeperController : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class GoalkeeperController : MonoBehaviour
     public Transform goalControllerTransform;
     float distance;
     float goalLine = 2.5f;
+    float speed = 3;
 
     private void FixedUpdate()
     {
@@ -30,7 +32,7 @@ public class GoalkeeperController : MonoBehaviour
             }
 
 
-            rb.transform.position = direction;
+            rb.transform.position = Vector3.MoveTowards(rb.transform.position, direction, speed * Time.deltaTime);
         }
         
     }
