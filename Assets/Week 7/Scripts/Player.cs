@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
     public SpriteRenderer sr;
-    public float speed = 100;
+    public float speed = 10;
 
     private void Start()
     {

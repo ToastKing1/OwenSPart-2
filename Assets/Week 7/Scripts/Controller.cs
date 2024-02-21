@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
+using TMPro;
 
 public class Controller : MonoBehaviour
 {
@@ -10,6 +12,8 @@ public class Controller : MonoBehaviour
     float charge;
     public float maxCharge = 5;
     Vector2 direction;
+    public static float score = 0;
+    public TextMeshProUGUI scoreText;
     public static Player selectedPlayer { get; private set; }
     public static void SetSelectedPlayer(Player player)
     {
@@ -34,6 +38,7 @@ public class Controller : MonoBehaviour
 
     private void Update()
     {
+        scoreText.text = "Score: "+score.ToString();
         if (selectedPlayer == null) return;
 
         if (Input.GetKeyDown(KeyCode.Space))
@@ -43,7 +48,7 @@ public class Controller : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.Space))
         {
-            charge = Mathf.Clamp(charge + 1 * Time.deltaTime, 0, maxCharge);
+            charge = Mathf.Clamp(charge + 5 * Time.deltaTime, 0, maxCharge);
             chargeSlider.value = charge;
         }
         if (Input.GetKeyUp(KeyCode.Space))
