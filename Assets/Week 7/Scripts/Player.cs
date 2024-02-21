@@ -7,12 +7,13 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float charge;
     public SpriteRenderer sr;
+    public float speed = 100;
 
     private void Start()
     {
         sr = GetComponent<SpriteRenderer>();
+        rb = GetComponent<Rigidbody2D>();
         Selected(false);
     }
 
@@ -31,5 +32,9 @@ public class Player : MonoBehaviour
         {
             sr.color = Color.red;
         }
+    }
+    public void Move(Vector2 direction)
+    {
+        rb.AddForce(direction*speed, ForceMode2D.Impulse);
     }
 }
